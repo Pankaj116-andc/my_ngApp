@@ -1,0 +1,18 @@
+<p>if-else works!</p>
+<h1>Control Flow</h1>
+@if(display){
+    <div style="background-color: green; height: 200px; width: 200px;">
+
+    </div>
+}
+<button (click)="toggle()">{{display?'Hide Box':'Show Box'}}</button><br><br>
+
+
+@if(show){
+    <div style="height: 200px; width: 200px; background-color: red;"></div>
+}
+@else{
+    <div style="height: 200px; width: 200px; background-color: gold;"></div>
+}
+
+<button (click)="toggleTwodiv()">{{show?'show golden div':'show red div'}}</button>

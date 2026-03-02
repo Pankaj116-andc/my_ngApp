@@ -1,0 +1,25 @@
+h1{color: red;}
+.container{
+    border: solid black 2px;
+    background: #3c93bb;
+
+}
+.btnBox{
+    display: flex;
+    justify-content: center;
+    /* margin: 50px 250px */
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+    padding: 40px;
+    margin: 10px;
+    border: black solid 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: medium;
+}
+.btn:hover{
+    border: white solid 2px;
+}

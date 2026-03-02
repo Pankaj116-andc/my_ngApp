@@ -1,0 +1,9 @@
+<p>get-set works!</p>
+<h1>User Name is :{{displayName}}</h1>
+<input type="text" [value]="name" (input)="getName($event)" placeholder="UserName"><br>
+<button (click)="showName()">getName</button>
+<button (click)="setName()">setName</button><hr>
+<h1>User Email:{{email}}</h1>
+<input type="text" [value]="email" placeholder="userEmail" #emailField>
+<button (click)="getEmail(emailField.value)">getEmail</button>
+<button (click)="setEmail()">setEmail</button>
