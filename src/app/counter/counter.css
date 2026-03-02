@@ -1,0 +1,51 @@
+.countDiv{
+    height: 250px;
+    width: 400px;
+    border: solid black 1px;
+    border-radius: 20px;
+    background-color: white;
+    display: inline-table;  
+    box-shadow: 10px 10px 10px black;
+    margin: 50px 110px;
+}
+
+.btnDiv{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.btn{
+    width: 100px;
+    /* height: 40px; */
+    border: solid white 1px;
+    border-radius: 10px;
+    background-color: blue;
+    /* padding: 5px; */
+    box-shadow: 5px 5px 5px rgb(85, 76, 76);
+}
+#btn1{
+    background-color: red;
+}
+#btn2{
+    background-color: gray;
+}
+#btn3{
+    background-color: blue;
+}
+#btn1:hover{
+    background-color: rgb(255, 100, 100);
+    border: solid black 1px;
+}
+#btn2:hover{
+    background-color: rgb(180, 180, 180);
+    border: solid black 1px;
+}
+#btn3:hover{
+    background-color: rgb(100, 100, 255);
+    border: solid black 1px;
+}
+h2{
+    color: aliceblue;
+    font-size: medium;
+}

@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-signal',
@@ -28,5 +28,12 @@ export class Signal {
   updateSignal() {
     // console.log('Updating signal with signal:', this.count());
     this.count.set(this.count() + 1);
+  }
+
+  height = signal(20);
+  width = signal(10);
+  area = computed(()=> this.height() * this.width())
+  update() {
+    this.width.set(this.width()+10)
   }
 }
