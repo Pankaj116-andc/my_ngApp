@@ -1,0 +1,17 @@
+<p>for-loop works!</p>
+
+<div>
+    <ul>
+        @for(user of users(); track user){
+            <li>{{user}}</li>
+        }
+    </ul><hr>
+    <ul>
+        @for(user of usersData(); track user.id){
+           <li [style.background-color]="$even?'#ccc':'#fff'">
+            <span>{{user.id}} {{user.name + " " + user.surname}}</span>
+           </li>
+        }
+    </ul>
+
+</div>

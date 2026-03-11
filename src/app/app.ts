@@ -7,10 +7,13 @@ import { GetSet } from './get-set/get-set';
 import { IfElse } from "./if-else/if-else";
 import { Effect } from './effect/effect';
 import { Counter } from './counter/counter';
+import { ForLoop } from './for-loop/for-loop';
+import { DataBinding } from './data-binding/data-binding';
+import { Rxjs } from './rxjs/rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [ClickCounter, Signal, GetSet, IfElse, Effect, Counter],
+  imports: [ClickCounter, Signal, GetSet, IfElse, Effect, Counter, ForLoop, DataBinding, Rxjs],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

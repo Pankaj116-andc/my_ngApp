@@ -1,0 +1,9 @@
+<p>data-binding works!</p>
+<h1>{{name()}}</h1>
+<input type="text" [value]="name()" (input)="name.set($event.target.value)">
+<hr>
+<h1>{{userData().name}}</h1>
+<input type="text">
+<h1>{{userData().age}}</h1>
+<input type="text">
+<h1>{{userData().email}}</h1>
