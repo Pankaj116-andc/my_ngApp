@@ -18,7 +18,6 @@ export class DataBinding {
   Service = inject(Service);
   userId: number = 0;
   getUser() {
-    console.log("executed")
     this.Service.getUserById(this.userId).subscribe((res: any) => {
       debugger;
     })

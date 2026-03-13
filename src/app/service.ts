@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Subject, tap, Observable } from 'rxjs';
+import { BehaviorSubject, map, Subject, tap, Observable, shareReplay } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class Service {
-  
+
 
   $courseDuration = new BehaviorSubject<string>("3 months");
 
@@ -18,8 +18,19 @@ export class Service {
 
   constructor(private http: HttpClient) { }
 
+  getUserById(id: number): any | undefined {
+
+    if (!this.userDetails.has(id)) {
+      const userDataObs = this.http.get("https://jsonplaceholder.typicode.com/users/" + id).pipe(
+        shareReplay(1)
+      );
+      this.userDetails.set(id, userDataObs);
+    }
+    return this.userDetails.get(id);
+  }
+
   getJasonUser() {
-    tap(userList=>{
+    tap(userList => {
       //debugger;
     })
     return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(
@@ -31,12 +42,10 @@ export class Service {
 
   getSingalUser() {
     return this.http.get('https://jsonplaceholder.typicode.com/users/2').pipe(
-      map((userData:any)=> userData.address)
+      map((userData: any) => userData.address)
     )
   }
-  
-  getUserById(id: number){
-    return this.http.get("https://jsonplaceholder.typicode.com/users/"+id)
-  }
+
+
 
 }
