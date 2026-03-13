@@ -10,10 +10,11 @@ import { Counter } from './counter/counter';
 import { ForLoop } from './for-loop/for-loop';
 import { DataBinding } from './data-binding/data-binding';
 import { Rxjs } from './rxjs/rxjs';
+import { SubBehReply } from './sub-beh-reply/sub-beh-reply';
 
 @Component({
   selector: 'app-root',
-  imports: [ClickCounter, Signal, GetSet, IfElse, Effect, Counter, ForLoop, DataBinding, Rxjs],
+  imports: [ClickCounter, Signal, GetSet, IfElse, Effect, Counter, ForLoop, DataBinding, Rxjs, SubBehReply],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

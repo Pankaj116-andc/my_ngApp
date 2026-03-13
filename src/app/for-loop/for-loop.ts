@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { Service } from '../service';
 
 @Component({
   selector: 'app-for-loop',
@@ -14,4 +15,11 @@ export class ForLoop {
     {id:3, name:"Ayush", surname:"Thakur", email:"Thakur@test.com"},
     {id:4, name:"Pankaj", surname:"Kumar", email:"Kumar@test.com"}
   ])
+
+  Service = inject(Service)
+  onRoleChange(event:any){
+    debugger;
+    this.Service.$roleBehaviour.next(event.target.value)
+    this.Service.$roleSub.next(event.target.value)
+  }
 }
