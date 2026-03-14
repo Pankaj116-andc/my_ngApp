@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { error } from 'console';
-import { concatMap, forkJoin, mergeMap, of, switchMap } from 'rxjs';
+import { concatMap, exhaustMap, forkJoin, mergeMap, of, Subject, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-combine-obs',
@@ -16,6 +16,8 @@ export class CombineObs {
 
   http = inject(HttpClient);
   searchControl: FormControl = new FormControl();
+
+  loginClick$ = new Subject<void>();
 
   constructor(){
 
@@ -62,5 +64,16 @@ export class CombineObs {
     this.stateData$.subscribe((res:any)=>{
       // debugger
     })
+
+    this.loginClick$.pipe(
+      exhaustMap(() => {
+        return this.http.get("https://jsonplaceholder.typicode.com/users")
+      })
+    ).subscribe((res:any)=>{
+      console.log(res)
+    })
+  }
+  onLogin(){
+    this.loginClick$.next();
   }
 }
