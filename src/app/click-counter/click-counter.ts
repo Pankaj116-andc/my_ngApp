@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-click-counter',
@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './click-counter.css',
 })
 export class ClickCounter {
-  count :number = 0;
+  count: WritableSignal<number> = signal(0);
   decrement(){
-    this.count--;
+    this.count.set(this.count() - 1);
   }
   reset(){
-    this.count=0;
+    this.count.set(0);
   }
   increment(){
-    this.count++;
+    this.count.set(this.count() + 1);
   }
 }

@@ -13,10 +13,12 @@ import { Rxjs } from './rxjs/rxjs';
 import { SubBehReply } from './sub-beh-reply/sub-beh-reply';
 import { CombineObs } from './combine-obs/combine-obs';
 import { RxjsReactiveForm } from './rxjs-reactive-form/rxjs-reactive-form';
+import { Unsubscribe } from './unsubscribe/unsubscribe';
+import { ToDoList } from './to-do-list/to-do-list';
 
 @Component({
   selector: 'app-root',
-  imports: [ClickCounter, RxjsReactiveForm, CombineObs, Signal, GetSet, IfElse, Effect, Counter, ForLoop, DataBinding, Rxjs, SubBehReply],
+  imports: [ClickCounter, ToDoList, Unsubscribe, RxjsReactiveForm, CombineObs, Signal, GetSet, IfElse, Effect, Counter, ForLoop, DataBinding, Rxjs, SubBehReply],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
