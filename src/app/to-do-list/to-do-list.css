@@ -1,0 +1,8 @@
+.taskList{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.taskList li{
+    border: 1px black;
+}
