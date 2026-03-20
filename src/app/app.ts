@@ -15,10 +15,11 @@ import { CombineObs } from './combine-obs/combine-obs';
 import { RxjsReactiveForm } from './rxjs-reactive-form/rxjs-reactive-form';
 import { Unsubscribe } from './unsubscribe/unsubscribe';
 import { ToDoList } from './to-do-list/to-do-list';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [ClickCounter, ToDoList, Unsubscribe, RxjsReactiveForm, CombineObs, Signal, GetSet, IfElse, Effect, Counter, ForLoop, DataBinding, Rxjs, SubBehReply],
+  imports: [RouterLink, RouterOutlet,ToDoList,Counter,IfElse,ClickCounter,Signal,GetSet,Effect,ForLoop,DataBinding,Rxjs,SubBehReply,CombineObs,RxjsReactiveForm,Unsubscribe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

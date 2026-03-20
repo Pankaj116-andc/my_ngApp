@@ -4,9 +4,9 @@
 <button (click)="addTask()">Add Task</button>
 
 @for (task of taskList; track task.id) {
-    <ul class="taskList">
-        <li>{{task.id}}</li>
-        <li>{{task.task}}</li>
-        <li><button (click)="deleteTask(task.id,task.task)">Delete</button></li>
-    </ul>
+<ul class="taskList">
+    <li>{{task.id}}</li>
+    <li>{{task.task}}</li>
+    <li><button (click)="deleteTask(task.id,task.task)">Delete</button></li>
+</ul>
 }
