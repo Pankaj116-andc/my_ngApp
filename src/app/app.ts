@@ -16,10 +16,15 @@ import { RxjsReactiveForm } from './rxjs-reactive-form/rxjs-reactive-form';
 import { Unsubscribe } from './unsubscribe/unsubscribe';
 import { ToDoList } from './to-do-list/to-do-list';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { Header } from "./header/header";
+import { Home } from './home/home';
+import { About } from './about/about';
+import { Contact } from './contact/contact';
+import { PageNotFOund } from './page-not-found/page-not-found';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterLink, RouterOutlet,ToDoList,Counter,IfElse,ClickCounter,Signal,GetSet,Effect,ForLoop,DataBinding,Rxjs,SubBehReply,CombineObs,RxjsReactiveForm,Unsubscribe],
+  imports: [RouterLink, PageNotFOund, RouterOutlet, About, Contact,  Home,  ToDoList, Counter, IfElse, ClickCounter, Signal, GetSet, Effect, ForLoop, DataBinding, Rxjs, SubBehReply, CombineObs, RxjsReactiveForm, Unsubscribe, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
